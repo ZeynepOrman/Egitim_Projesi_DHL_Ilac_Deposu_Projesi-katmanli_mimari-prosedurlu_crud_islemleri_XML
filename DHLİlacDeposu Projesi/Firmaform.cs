@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 
 using Entity;
 using Facade;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DHLİlacDeposu_Projesi
 {
@@ -30,6 +32,13 @@ namespace DHLİlacDeposu_Projesi
             Liste();
         }
 
+        private void Error_Handle(string message = "Güncelleme başarısız!")
+        {
+            MessageBox.Show(message);
+        }
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             EFirma ekleme = new EFirma();
@@ -39,6 +48,8 @@ namespace DHLİlacDeposu_Projesi
             FFirma.Ekleme(ekleme);
             Liste();
         }
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {

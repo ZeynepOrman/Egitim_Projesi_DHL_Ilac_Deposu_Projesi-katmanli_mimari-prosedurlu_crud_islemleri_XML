@@ -35,8 +35,8 @@ namespace DHLİlacDeposu_Projesi
             EGelenİlac ekleme = new EGelenİlac();
             ekleme.GelenİlacAdi= textBox1.Text;
             ekleme.GelenİlacBarkodNo = Convert.ToInt32(textBox2.Text);
-            ekleme.GelenİlacUretimTarihi = Convert.ToDateTime(textBox3.Text);
-            ekleme.GelenİlacTuketimTarihi = Convert.ToDateTime(textBox4.Text);
+            ekleme.GelenİlacUretimTarihi = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
+            ekleme.GelenİlacTuketimTarihi = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString());
             ekleme.GelenİlacAlinanFirma = textBox5.Text;
             ekleme.GelenİlacSatilanFirma = textBox6.Text;
             FGelenİlac.Ekleme(ekleme);
@@ -49,8 +49,8 @@ namespace DHLİlacDeposu_Projesi
             yenile.GelenİlacNo = Convert.ToInt32(textBox1.Tag);
             yenile.GelenİlacAdi = textBox1.Text;
             yenile.GelenİlacBarkodNo = Convert.ToInt32(textBox2.Text);
-            yenile.GelenİlacUretimTarihi = Convert.ToDateTime(textBox3.Text);
-            yenile.GelenİlacTuketimTarihi = Convert.ToDateTime(textBox4.Text);
+            yenile.GelenİlacUretimTarihi = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
+            yenile.GelenİlacTuketimTarihi = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString());
             yenile.GelenİlacAlinanFirma = textBox5.Text;
             yenile.GelenİlacSatilanFirma = textBox6.Text;
             FGelenİlac.Guncelle(yenile);
@@ -83,8 +83,8 @@ namespace DHLİlacDeposu_Projesi
             textBox1.Tag = satir.Cells["GelenİlacNo"].Value.ToString();
             textBox1.Text = satir.Cells["GelenİlacAdi"].Value.ToString();
             textBox2.Text = satir.Cells["GelenİlacBarkodNo"].Value.ToString();
-            textBox3.Text = satir.Cells["GelenİlacUretimTarihi"].Value.ToString();
-            textBox4.Text = satir.Cells["GelenİlacTuketimTarihi"].Value.ToString();
+            dateTimePicker1.Text = satir.Cells["GelenİlacUretimTarihi"].Value.ToString();
+            dateTimePicker2.Text = satir.Cells["GelenİlacTuketimTarihi"].Value.ToString();
             textBox5.Text = satir.Cells["GelenİlacAlinanFirma"].Value.ToString();
             textBox6.Text = satir.Cells["GelenİlacSatilanFirma"].Value.ToString();
 
@@ -101,5 +101,9 @@ namespace DHLİlacDeposu_Projesi
             ara.GelenİlacAdi = textBox1.Text;
             dataGridView1.DataSource = FArama.Arama3(ara);
         }
+
     }
 }
+
+//dateTimePicker2.Text = dataGridView1.Rows[sec].Cells[3].Value.ToString();
+//dateTimePicker1.Value.ToShortDateString()

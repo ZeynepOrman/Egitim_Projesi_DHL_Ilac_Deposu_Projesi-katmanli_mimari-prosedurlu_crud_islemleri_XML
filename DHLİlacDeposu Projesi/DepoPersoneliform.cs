@@ -87,5 +87,10 @@ namespace DHLİlacDeposu_Projesi
             ara.DepoPersoneliAdSoyad = textBox1.Text;
             dataGridView1.DataSource = FArama.Arama1(ara);
         }
+
+        private void DepoPersoneliform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

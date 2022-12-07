@@ -45,6 +45,20 @@ namespace Facade
             return dt;
         }
 
+        public static DataTable Raporlama4(EDepo islem)
+        {
+            SqlCommand komut = new SqlCommand("FirmayaİadeEdilenİlacAdedi", Baglanti.con);
+            komut.CommandType = CommandType.StoredProcedure;
+
+            komut.Parameters.AddWithValue("DepoAdi", islem.DepoAdi);
+
+            SqlDataAdapter adp = new SqlDataAdapter(komut);
+            adp.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            return dt;
+        }
+
         public static DataTable Raporlama3(EGeriGelenİlac islem)
         {
 
@@ -53,6 +67,17 @@ namespace Facade
             //komut.Parameters.AddWithValue("İadeEdilenİlacAdi", islem.İadeEdilenİlacAdi);
             DBaglanti.ExecuteNonQuery(komut);
 
+            SqlDataAdapter adp = new SqlDataAdapter(komut);
+            adp.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable Raporlama5(EGelenİlac islem)
+        {
+            SqlCommand komut = new SqlCommand("FirmaGelenİlac", Baglanti.con);
+            komut.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter adp = new SqlDataAdapter(komut);
             adp.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();

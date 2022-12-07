@@ -106,5 +106,12 @@ namespace DHLİlacDeposu_Projesi
         {
             Application.Exit();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisi go = new KullaniciGirisi();
+            go.Show();
+            this.Hide();
+        }
     }
 }

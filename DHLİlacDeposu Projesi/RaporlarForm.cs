@@ -41,11 +41,24 @@ namespace DHLİlacDeposu_Projesi
             dataGridView1.DataSource = FRapor.Raporlama2(verial);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EDepo verial = new EDepo();
+            //verial.İadeEdilenİlacAlinanFirmaAdi = textBox3.Text;
+            dataGridView1.DataSource = FRapor.Raporlama4(verial);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             EGeriGelenİlac verial = new EGeriGelenİlac();
             //verial.GeriGelenİlacTuketimTarihi
             dataGridView1.DataSource = FRapor.Raporlama3(verial);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EGelenİlac verial = new EGelenİlac();
+            dataGridView1.DataSource = FRapor.Raporlama5(verial);
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -59,6 +72,7 @@ namespace DHLİlacDeposu_Projesi
         {
             Application.Exit();
         }
+
 
     }
 }

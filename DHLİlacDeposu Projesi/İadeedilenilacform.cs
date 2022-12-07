@@ -35,8 +35,8 @@ namespace DHLİlacDeposu_Projesi
             EİadeEdilenİlac ekleme = new EİadeEdilenİlac();
             ekleme.İadeEdilenİlacAdi = textBox1.Text;
             ekleme.İadeEdilenİlacBarkodNo = Convert.ToInt32(textBox2.Text);
-            ekleme.İadeEdilenİlacUretimTarihi = Convert.ToDateTime(textBox3.Text);
-            ekleme.İadeEdilenİlacTuketimTarihi = Convert.ToDateTime(textBox4.Text);
+            ekleme.İadeEdilenİlacUretimTarihi = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
+            ekleme.İadeEdilenİlacTuketimTarihi = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString());
             ekleme.İadeEdilenİlacAlinanFirmaAdi = textBox5.Text;
             FİadeEdilenİlac.Ekleme(ekleme);
             Liste();
@@ -48,8 +48,8 @@ namespace DHLİlacDeposu_Projesi
             yenile.İadeEdilenİlacNo = Convert.ToInt32(textBox1.Tag);
             yenile.İadeEdilenİlacAdi = textBox1.Text;
             yenile.İadeEdilenİlacBarkodNo = Convert.ToInt32(textBox2.Text);
-            yenile.İadeEdilenİlacUretimTarihi = Convert.ToDateTime(textBox3.Text);
-            yenile.İadeEdilenİlacTuketimTarihi = Convert.ToDateTime(textBox4.Text);
+            yenile.İadeEdilenİlacUretimTarihi = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
+            yenile.İadeEdilenİlacTuketimTarihi = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString());
             yenile.İadeEdilenİlacAlinanFirmaAdi = textBox5.Text;
             FİadeEdilenİlac.Guncelle(yenile);
             Liste();
@@ -81,8 +81,8 @@ namespace DHLİlacDeposu_Projesi
             textBox1.Tag = satir.Cells["İadeEdilenİlacNo"].Value.ToString();
             textBox1.Text = satir.Cells["İadeEdilenİlacAdi"].Value.ToString();
             textBox2.Text = satir.Cells["İadeEdilenİlacBarkodNo"].Value.ToString();
-            textBox3.Text = satir.Cells["İadeEdilenİlacUretimTarihi"].Value.ToString();
-            textBox4.Text = satir.Cells["İadeEdilenİlacTuketimTarihi"].Value.ToString();
+            dateTimePicker1.Text = satir.Cells["İadeEdilenİlacUretimTarihi"].Value.ToString();
+            dateTimePicker2.Text = satir.Cells["İadeEdilenİlacTuketimTarihi"].Value.ToString();
             textBox5.Text = satir.Cells["İadeEdilenİlacAlinanFirmaAdi"].Value.ToString();
 
         }

@@ -46,6 +46,7 @@
     <Compile Include="EFirma.cs" />
     <Compile Include="EGelenİlac.cs" />
     <Compile Include="EGeriGelenİlac.cs" />
+    <Compile Include="EKullaniciGirisi.cs" />
     <Compile Include="EİadeEdilenİlac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

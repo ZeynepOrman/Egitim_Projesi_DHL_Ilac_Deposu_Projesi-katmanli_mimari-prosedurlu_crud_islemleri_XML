@@ -44,10 +44,12 @@
     <Compile Include="Baglanti.cs" />
     <Compile Include="DBaglanti.cs" />
     <Compile Include="FArama.cs" />
+    <Compile Include="FComboBox.cs" />
     <Compile Include="FDepoPersoneli.cs" />
     <Compile Include="FFirma.cs" />
     <Compile Include="FGelenİlac.cs" />
     <Compile Include="FGeriGelenİlac.cs" />
+    <Compile Include="FKullaniciGirisi.cs" />
     <Compile Include="FRapor.cs" />
     <Compile Include="FİadeEdilenİlac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
