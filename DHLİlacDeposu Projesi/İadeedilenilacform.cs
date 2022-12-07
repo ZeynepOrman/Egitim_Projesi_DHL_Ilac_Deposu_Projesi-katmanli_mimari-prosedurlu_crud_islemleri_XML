@@ -93,5 +93,12 @@ namespace DHLİlacDeposu_Projesi
             ara.İadeEdilenİlacAdi = textBox1.Text;
             dataGridView1.DataSource = FArama.Arama5(ara);
         }
+
+        private void İadeedilenilacform_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = FComboBox.CBDoldur2();
+            comboBox1.DisplayMember = "DepoNo";
+            comboBox1.ValueMember = "DepoNo";
+        }
     }
 }

@@ -343,6 +343,7 @@ namespace DHLİlacDeposu_Projesi
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "İadeedilenilacform";
             this.Text = "İadeedilenilacform";
+            this.Load += new System.EventHandler(this.İadeedilenilacform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

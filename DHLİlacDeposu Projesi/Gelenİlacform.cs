@@ -92,7 +92,12 @@ namespace DHLİlacDeposu_Projesi
 
         private void Gelenİlacform_Load(object sender, EventArgs e)
         {
-
+            comboBox2.DataSource = FComboBox.CBDoldur1();
+            comboBox2.DisplayMember = "FirmaNo";
+            comboBox2.ValueMember = "FirmaNo";
+            comboBox1.DataSource = FComboBox.CBDoldur2();
+            comboBox1.DisplayMember = "DepoNo";
+            comboBox1.ValueMember = "DepoNo";
         }
 
         private void button7_Click(object sender, EventArgs e)
