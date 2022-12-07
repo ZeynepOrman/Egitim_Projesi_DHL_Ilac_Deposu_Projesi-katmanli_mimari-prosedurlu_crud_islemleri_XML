@@ -50,6 +50,7 @@ namespace DHLİlacDeposu_Projesi
         {
             pictureBox1.Visible = false;
             groupBox1.Visible = false;
+            label7.Visible = false;
             groupBox2.Visible = true;
         }
 

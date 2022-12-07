@@ -16,7 +16,7 @@ namespace DHLİlacDeposu_Projesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new İadeedilenilacform());
+            Application.Run(new RaporlarForm());
         }
     }
 }

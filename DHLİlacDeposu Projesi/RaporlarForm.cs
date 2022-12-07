@@ -30,22 +30,25 @@ namespace DHLİlacDeposu_Projesi
             //if (comboBox1.SelectedItem == "Firmaya göre sırala")
             //{
                 EFirma verial = new EFirma();
-                verial.FirmaAdi = textBox1.Text;
+                verial.FirmaAdi = comboBox1.Text;
                 dataGridView1.DataSource = FRapor.Raporlama1(verial);
+                comboBox1.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             EFirma verial = new EFirma();
-            verial.FirmaAdi = textBox2.Text;
+            verial.FirmaAdi = comboBox2.Text;
             dataGridView1.DataSource = FRapor.Raporlama2(verial);
+            comboBox2.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             EDepo verial = new EDepo();
-            //verial.İadeEdilenİlacAlinanFirmaAdi = textBox3.Text;
+            verial.DepoAdi = comboBox3.Text;
             dataGridView1.DataSource = FRapor.Raporlama4(verial);
+            comboBox3.Text = "";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -73,6 +76,17 @@ namespace DHLİlacDeposu_Projesi
             Application.Exit();
         }
 
-
+        private void RaporlarForm_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = FComboBox.CBDoldur1();
+            comboBox1.DisplayMember = "FirmaAdi";
+            comboBox1.ValueMember = "FirmaNo";
+            comboBox2.DataSource = FComboBox.CBDoldur1();
+            comboBox2.DisplayMember = "FirmaAdi";
+            comboBox2.ValueMember = "FirmaNo";
+            comboBox3.DataSource = FComboBox.CBDoldur2();
+            comboBox3.DisplayMember = "DepoAdi";
+            comboBox3.ValueMember = "DepoNo";
+        }
     }
 }

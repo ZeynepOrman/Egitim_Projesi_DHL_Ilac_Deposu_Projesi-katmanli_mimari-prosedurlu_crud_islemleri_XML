@@ -161,5 +161,10 @@
       <Name>Facade</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQLDosyasi\SQLİlacDeposu.sql" />
+    <Content Include="İmages\Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

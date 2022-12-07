@@ -31,7 +31,7 @@ namespace Facade
         public static DataTable Raporlama2(EFirma islem)
         {
             //EFirma islem = new EFirma();
-            SqlCommand komut = new SqlCommand("FirmanınİadeEttiğiİlacAdedi", Baglanti.con);
+             SqlCommand komut = new SqlCommand("FirmanınİadeEttiğiİlacAdedi", Baglanti.con);
             komut.CommandType = CommandType.StoredProcedure;
 
             komut.Parameters.AddWithValue("FirmaAdi", islem.FirmaAdi);
