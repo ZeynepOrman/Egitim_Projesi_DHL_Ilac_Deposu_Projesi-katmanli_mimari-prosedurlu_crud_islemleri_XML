@@ -32,7 +32,7 @@ namespace DHLİlacDeposu_Projesi
                 EFirma verial = new EFirma();
                 verial.FirmaAdi = comboBox1.Text;
                 dataGridView1.DataSource = FRapor.Raporlama1(verial);
-                comboBox1.Text = "";
+    
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace DHLİlacDeposu_Projesi
             EFirma verial = new EFirma();
             verial.FirmaAdi = comboBox2.Text;
             dataGridView1.DataSource = FRapor.Raporlama2(verial);
-            comboBox2.Text = "";
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -48,20 +48,21 @@ namespace DHLİlacDeposu_Projesi
             EDepo verial = new EDepo();
             verial.DepoAdi = comboBox3.Text;
             dataGridView1.DataSource = FRapor.Raporlama4(verial);
-            comboBox3.Text = "";
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            EGeriGelenİlac verial = new EGeriGelenİlac();
+            EGelenİlac verial = new EGelenİlac();
             //verial.GeriGelenİlacTuketimTarihi
-            dataGridView1.DataSource = FRapor.Raporlama3(verial);
+            dataGridView1.DataSource = FRapor.Raporlama5(verial);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EGelenİlac verial = new EGelenİlac();
-            dataGridView1.DataSource = FRapor.Raporlama5(verial);
+            EGeriGelenİlac verial = new EGeriGelenİlac();
+
+            dataGridView1.DataSource = FRapor.Raporlama3(verial);
         }
 
         private void button13_Click(object sender, EventArgs e)

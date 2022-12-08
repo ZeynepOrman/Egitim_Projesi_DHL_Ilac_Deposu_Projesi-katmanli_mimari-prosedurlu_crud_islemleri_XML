@@ -163,6 +163,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ScreenShots\DHLİlacDeposuAnasayfa.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuDepoPersoneli.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuFirma.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuGelenİlac.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuGeriGelenİlac.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuGirisSayfasi.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuKullaniciKayitSayfasi.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuRaporSayfasi.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuXMLİslemi.png" />
+    <Content Include="ScreenShots\DHLİlacDeposuİadeEdilenİlac.png" />
     <Content Include="SQLDosyasi\SQLİlacDeposu.sql" />
     <Content Include="İmages\Logo.png" />
   </ItemGroup>
